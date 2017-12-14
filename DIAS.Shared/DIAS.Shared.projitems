@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c5e91462-848d-4357-919d-ed7216759267</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DIAS.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Aggregates\DicomStation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aggregates\IAggregateRoot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aggregates\ImageRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aggregates\SeriesRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Aggregates\StudyRecord.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IPacsUploader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repo\IRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repo\IRepo{T}.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Aggregates\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Repo\" />
+  </ItemGroup>
+</Project>
