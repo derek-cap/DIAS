@@ -1,2 +1,2 @@
 # DIAS
-This is a repository for dicom information architecture system.
+This is a repository for dicom informaton archive system.
