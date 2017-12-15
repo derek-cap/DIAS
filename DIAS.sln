@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIAS", "DIAS\DIAS.csproj", "{9CCCF58B-A56E-45B3-A63D-BB631990FACE}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DIAS.Shared", "DIAS.Shared\DIAS.Shared.shproj", "{C5E91462-848D-4357-919D-ED7216759267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIAS.DataModel", "DIAS.DataModel\DIAS.DataModel.csproj", "{84F2859C-49BB-4B11-83D7-749E0033DBF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIAS.DataModel", "DIAS.DataModel\DIAS.DataModel.csproj", "{84F2859C-49BB-4B11-83D7-749E0033DBF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIAS.Infrasturcture", "DIAS.Infrasturcture\DIAS.Infrasturcture.csproj", "{60407962-0374-4685-90D8-36F39C6E6613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIAS.Infrasturcture", "DIAS.Infrasturcture\DIAS.Infrasturcture.csproj", "{60407962-0374-4685-90D8-36F39C6E6613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIASCoreConsole", "DIASCoreConsole\DIASCoreConsole.csproj", "{D7859F1D-FCCB-4849-814F-EABC6BDA438D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIAS", "DIAS\DIAS.csproj", "{9CCCF58B-A56E-45B3-A63D-BB631990FACE}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -20,10 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84F2859C-49BB-4B11-83D7-749E0033DBF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84F2859C-49BB-4B11-83D7-749E0033DBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84F2859C-49BB-4B11-83D7-749E0033DBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +30,14 @@ Global
 		{60407962-0374-4685-90D8-36F39C6E6613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60407962-0374-4685-90D8-36F39C6E6613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60407962-0374-4685-90D8-36F39C6E6613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7859F1D-FCCB-4849-814F-EABC6BDA438D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7859F1D-FCCB-4849-814F-EABC6BDA438D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7859F1D-FCCB-4849-814F-EABC6BDA438D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7859F1D-FCCB-4849-814F-EABC6BDA438D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCCF58B-A56E-45B3-A63D-BB631990FACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
