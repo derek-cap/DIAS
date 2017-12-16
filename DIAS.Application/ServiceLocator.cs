@@ -9,6 +9,9 @@ namespace DIAS.Application
         private static object _mutex = new object();
 
         private static IContainer _container;
+        /// <summary>
+        /// Single instance of <see cref="IContainer"/>.
+        /// </summary>
         public static IContainer Container
         {
             get
@@ -24,6 +27,10 @@ namespace DIAS.Application
             }
         }
 
+        /// <summary>
+        /// Initialize an <see cref="Autofac.IContainer"/>.
+        /// </summary>
+        /// <returns></returns>
         protected static IContainer Initialize()
         {
             var builder = new ContainerBuilder();
