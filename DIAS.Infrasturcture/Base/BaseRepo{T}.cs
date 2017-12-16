@@ -18,7 +18,7 @@ namespace ModelRepository
 
         public List<T> GetAll() => Table.ToList();
 
-        public Task<List<T>> GetAllAsync() => Table.ToListAsync();
+        public Task<List<T>> GetAllAsync() => Table.ToListAsync();       
 
         public int Add(T entity)
         {
