@@ -17,12 +17,20 @@ namespace DIAS.Infrasturcture
         public int Delete(int id)
         {
             SeriesRecord record = GetOne(id);
+            if (record == null)
+            {
+                return -1;
+            }
             return base.Delete(record);
         }
 
         public Task<int> DeleteAsync(int id)
         {
             SeriesRecord record = GetOne(id);
+            if (record == null)
+            {
+                return Task.FromResult(-1);
+            }
             return DeleteAsync(record);
         }
 

@@ -10,10 +10,12 @@ namespace DIAS.Data
     public class SeriesRecord : IAggregateRoot
     {
         [Key]
+        [DataMember]
         public int SeriesInstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]
+        [Required]
         public string SeriesUID { get; set; }         // 1
 
         [StringLength(20)]

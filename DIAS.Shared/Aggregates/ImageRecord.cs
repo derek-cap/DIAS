@@ -9,10 +9,12 @@ namespace DIAS.Data
     public class ImageRecord : IAggregateRoot
     {
         [Key]
-        public int ImageId { get; protected set; }
+        [DataMember]
+        public int ImageInstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]
+        [Required]
         public string ImageUID { get; protected set; }             // 0
 
         [Required, StringLength(100)]
