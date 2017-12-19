@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="fo-dicom.NetCore" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DIAS.DataModel\DIAS.DataModel.csproj" />
     <ProjectReference Include="..\DIAS.Infrasturcture\DIAS.Infrasturcture.csproj" />
   </ItemGroup>
