@@ -19,7 +19,10 @@ namespace DIAS.Data
     [Table("Studies")]
     public partial class StudyRecord : IAggregateRoot
     {
-        [Key, StringLength(100)]
+        [Key]
+        public int StudyInstaceId { get; protected set; }
+
+        [StringLength(100)]
         [DataMember]
         public string StudyUID { get; protected set; }         // 1
 
