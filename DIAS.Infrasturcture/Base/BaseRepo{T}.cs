@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ModelRepository
 {
-    class BaseRepo<T> : IDisposable where T : class
+    public class BaseRepo<T> : IDisposable where T : class
     {
         public BaseRepo()
         {

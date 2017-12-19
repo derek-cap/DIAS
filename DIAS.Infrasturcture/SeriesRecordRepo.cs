@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DIAS.Infrasturcture
 {
-    class SeriesRecordRepo: BaseRepo<SeriesRecord>, IRepo<SeriesRecord>
+    public class SeriesRecordRepo: BaseRepo<SeriesRecord>, IRepo<SeriesRecord>
     {
         public SeriesRecordRepo()
         {

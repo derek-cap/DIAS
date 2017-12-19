@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace DIAS.Infrasturcture
 {
-     class ImageRecordRepo : BaseRepo<ImageRecord>, IRepo<ImageRecord>
+    public class ImageRecordRepo : BaseRepo<ImageRecord>, IRepo<ImageRecord>
     {
         public ImageRecordRepo()
         {

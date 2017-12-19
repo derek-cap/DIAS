@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIAS
+namespace DIAS.Infrasturcture
 {
-     class StudyRecordRepo : BaseRepo<StudyRecord>, IRepo<StudyRecord>
+    public class StudyRecordRepo : BaseRepo<StudyRecord>, IRepo<StudyRecord>
     {
         public StudyRecordRepo()
         {

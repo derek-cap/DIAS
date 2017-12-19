@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using DIAS.Data;
+using DIAS.Infrasturcture;
 using System;
 using System.Collections.Generic;
 
@@ -35,7 +37,9 @@ namespace DIAS.Application
         {
             var builder = new ContainerBuilder();
             // Register 
-
+            builder.RegisterType<StudyRecordRepo>().As<IRepo<StudyRecord>>();
+            builder.RegisterType<SeriesRecordRepo>().As<IRepo<SeriesRecord>>();
+            builder.RegisterType<ImageRecordRepo>().As<IRepo<ImageRecord>>();
             // 
             return builder.Build();
         }

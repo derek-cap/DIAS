@@ -8,4 +8,8 @@
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DIAS.DataModel\DIAS.DataModel.csproj" />
+  </ItemGroup>
+
 </Project>
