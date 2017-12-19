@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DIAS
 {
-     class StudyRecordRepo : BaseRepo<StudyRecord>, IRepo<StudyRecord>
+    class StudyRecordRepo : BaseRepo<StudyRecord>, IRepo<StudyRecord>
     {
         public StudyRecordRepo()
         {
@@ -17,12 +17,20 @@ namespace DIAS
         public int Delete(int id)
         {
             StudyRecord record = GetOne(id);
+            if (record == null)
+            {
+                return -1;
+            }
             return Delete(record);
         }
 
         public Task<int> DeleteAsync(int id)
         {
             StudyRecord record = GetOne(id);
+            if (record == null)
+            {
+                return Task.FromResult(-1);
+            }
             return DeleteAsync(record);
         }
 

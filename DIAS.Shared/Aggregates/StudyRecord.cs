@@ -20,10 +20,12 @@ namespace DIAS.Data
     public partial class StudyRecord : IAggregateRoot
     {
         [Key]
-        public int StudyInstaceId { get; protected set; }
+        [DataMember]
+        public int StudyInstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]
+        [Required]
         public string StudyUID { get; protected set; }         // 1
 
         [StringLength(30)]
