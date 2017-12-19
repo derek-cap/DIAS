@@ -9,7 +9,10 @@ namespace DIAS.Data
     [DataContract]
     public class SeriesRecord : IAggregateRoot
     {
-        [Key, StringLength(100)]
+        [Key]
+        public int SeriesInstanceId { get; protected set; }
+
+        [StringLength(100)]
         [DataMember]
         public string SeriesUID { get; set; }         // 1
 
@@ -50,7 +53,7 @@ namespace DIAS.Data
         [DataMember]
         public bool IsContrast { get; set; }   // 11
 
-        [ForeignKey("StudyUID")]
+        [ForeignKey("StudyInstaceId")]
         public virtual StudyRecord Study { get; set; }
 
         public virtual ICollection<ImageRecord> Images { get; set; } = new HashSet<ImageRecord>();

@@ -8,7 +8,10 @@ namespace DIAS.Data
     [DataContract]
     public class ImageRecord : IAggregateRoot
     {
-        [Key, StringLength(100)]
+        [Key]
+        public int ImageId { get; protected set; }
+
+        [StringLength(100)]
         [DataMember]
         public string ImageUID { get; protected set; }             // 0
 
@@ -30,7 +33,7 @@ namespace DIAS.Data
         [DataMember]
         public string DcmFileName { get; set; }                 // 5
 
-        [ForeignKey("SeriesUID")]
+        [ForeignKey("SeriesInstanceId")]
         public virtual SeriesRecord Series { get; set; }
 
         protected ImageRecord()

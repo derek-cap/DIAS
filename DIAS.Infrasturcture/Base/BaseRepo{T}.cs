@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DIAS.Infrasturcture;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,19 @@ namespace ModelRepository
 {
     class BaseRepo<T> : IDisposable where T : class
     {
-        protected DbContext Context { get; } 
+        public BaseRepo()
+        {
+            Context = new DicomStationDBContext();
+            //Context.Database.EnsureCreated();
+        }
+        protected DicomStationDBContext Context { get; } 
         protected DbSet<T> Table;
 
         public T GetOne(int? id) => Table.Find(id);
 
         public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
 
-        public List<T> GetAll() => Table.ToList();
+        public IEnumerable<T> GetAll() => Table.ToList();
 
         public Task<List<T>> GetAllAsync() => Table.ToListAsync();
 

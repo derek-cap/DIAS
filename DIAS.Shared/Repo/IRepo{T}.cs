@@ -14,6 +14,9 @@ namespace DIAS
         int Delete(T entity);
         Task<int> DeleteAsync(T entity);
 
+        int Add(T entity);
+        Task<int> AddAsync(T entity);
+
         T GetOne(int? id);
         Task<T> GetOneAsync(int? id);
 
