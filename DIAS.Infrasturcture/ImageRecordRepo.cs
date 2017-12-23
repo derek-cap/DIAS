@@ -17,7 +17,7 @@ namespace DIAS.Infrasturcture
 
         public int Delete(int id)
         {
-            ImageRecord record = base.GetOne(id);
+            ImageRecord record = GetOne(id);
             if (record == null)
             {
                 return -1;
@@ -27,17 +27,12 @@ namespace DIAS.Infrasturcture
 
         public Task<int> DeleteAsync(int id)
         {
-            ImageRecord record = base.GetOne(id);
+            ImageRecord record = GetOne(id);
             if (record == null)
             {
                 return Task.FromResult(-1);
             }
             return DeleteAsync(record);
-        }
-
-        public new ImageRecord GetOne(int? id)
-        {
-            return base.GetOne(id);
         }
 
         IEnumerable<ImageRecord> IRepo<ImageRecord>.GetAll()
