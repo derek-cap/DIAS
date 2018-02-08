@@ -1,0 +1,79 @@
+@page
+@model DIAS.RazorPages.Pages.Studies.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudyRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyUID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyUID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.DateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.DateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientSex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientSex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.Modality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.Modality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.RecordState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.RecordState)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.StudyRecord.InstanceId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

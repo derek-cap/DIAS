@@ -7,11 +7,16 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.2" />
+    <PackageReference Include="fo-dicom.Json" Version="3.0.2" />
     <PackageReference Include="fo-dicom.NetCore" Version="3.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DIAS.DataModel\DIAS.DataModel.csproj" />
+    <ProjectReference Include="..\DIAS.EventBusRabbitMQ\DIAS.EventBusRabbitMQ.csproj" />
     <ProjectReference Include="..\DIAS.Infrasturcture\DIAS.Infrasturcture.csproj" />
   </ItemGroup>
 

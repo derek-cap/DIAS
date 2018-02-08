@@ -11,7 +11,7 @@ namespace DIAS.Data
     {
         [Key]
         [DataMember]
-        public int SeriesInstanceId { get; protected set; }
+        public int InstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]
@@ -55,7 +55,7 @@ namespace DIAS.Data
         [DataMember]
         public bool IsContrast { get; set; }   // 11
 
-        [ForeignKey("StudyInstaceId")]
+        [ForeignKey("InstanceId")]
         public virtual StudyRecord Study { get; set; }
 
         public virtual ICollection<ImageRecord> Images { get; set; } = new HashSet<ImageRecord>();

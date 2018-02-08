@@ -32,7 +32,7 @@ namespace DIAS
         [StringLength(50)]
         public string AE { get; set; }
 
-        public int CategoryInt { get; set; }
+        protected int CategoryInt { get; set; }
 
         [StringLength(100)]
         public string Description { get; set; }

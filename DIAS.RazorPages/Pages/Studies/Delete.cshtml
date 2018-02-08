@@ -1,0 +1,82 @@
+@page
+@model DIAS.RazorPages.Pages.Studies.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StudyRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyUID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyUID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.DateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.DateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientSex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientSex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.PatientAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.PatientAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.Modality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.Modality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.StudyDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.StudyDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StudyRecord.RecordState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StudyRecord.RecordState)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="StudyRecord.InstanceId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

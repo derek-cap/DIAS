@@ -11,9 +11,10 @@ namespace DIAS.Web.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            await Task.Delay(1);
+            return new ObjectResult(new string[] { "value1", "value2" });
         }
 
         // GET api/values/5

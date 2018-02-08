@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +17,8 @@ namespace DIAS
             try
             {
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("http://10.10.22.119:8081");
+          //      client.BaseAddress = new Uri("http://10.10.22.119:8081");
+                client.BaseAddress = new Uri("http://localhost:60660");
                 // Add an Accept header for JSON format.
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -28,8 +31,11 @@ namespace DIAS
                     {
                         Console.WriteLine(item);
                     }
+                } 
+                else
+                {
+                    Console.WriteLine(response.StatusCode);
                 }
-
             }
             catch (Exception ex)
             {

@@ -14,14 +14,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)Aggregates\ImageRecord.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Aggregates\SeriesRecord.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Aggregates\StudyRecord.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Events\Bus.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Events\IDomainEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\Abstractions\IDynamicDomainEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\Abstractions\IEventBus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\DomainEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\Abstractions\IDomainEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\IEventBusSubscriptionsManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\InMemoryEventBusSubscriptionsManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\SubscriptionInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IPacsUploader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repo\IRepository.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Repo\IRepo{T}.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Aggregates\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Events\Abstractions\" />
     <Folder Include="$(MSBuildThisFileDirectory)Repo\" />
   </ItemGroup>
 </Project>

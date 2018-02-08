@@ -21,7 +21,7 @@ namespace DIAS.Data
     {
         [Key]
         [DataMember]
-        public int StudyInstanceId { get; protected set; }
+        public int InstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]

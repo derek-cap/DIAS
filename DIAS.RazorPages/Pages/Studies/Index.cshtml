@@ -1,0 +1,90 @@
+@page
+@model DIAS.RazorPages.Pages.Studies.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].StudyUID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].StudyID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].PatientName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].DateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].PatientID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].PatientSex)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].PatientAge)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].Modality)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].StudyDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudyRecord[0].RecordState)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.StudyRecord) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudyUID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudyID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudyDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordState)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.InstanceId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.InstanceId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.InstanceId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

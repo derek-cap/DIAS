@@ -95,11 +95,5 @@ namespace DIAS.Web
             _context.SaveChanges();
             return new NoContentResult();
         }
-
-        [HttpGet, Route("todo/index")]
-        public IActionResult Index()
-        {
-            return View("Views/Home/About.cshtml");
-        }
     }
 }

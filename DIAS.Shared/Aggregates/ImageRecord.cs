@@ -10,7 +10,7 @@ namespace DIAS.Data
     {
         [Key]
         [DataMember]
-        public int ImageInstanceId { get; protected set; }
+        public int InstanceId { get; protected set; }
 
         [StringLength(100)]
         [DataMember]
@@ -35,7 +35,7 @@ namespace DIAS.Data
         [DataMember]
         public string DcmFileName { get; set; }                 // 5
 
-        [ForeignKey("SeriesInstanceId")]
+        [ForeignKey("InstanceId")]
         public virtual SeriesRecord Series { get; set; }
 
         protected ImageRecord()
