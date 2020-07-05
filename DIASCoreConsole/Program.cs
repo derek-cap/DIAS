@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DIASCoreConsole
@@ -62,13 +63,10 @@ namespace DIASCoreConsole
                 //{
                 //    logger.LogInformation("Try an information.");
                 //}
-
-                var connectionFactory = NewTask.CreateLocalConnectionFactory();
-                //    var connectionFactory = NewTask.CreateRemoteConnectionFactory();
-                var imageFactory = new FakeImageFactory(512, 512, 600);
-                NewTask newTask = new NewTask(connectionFactory, imageFactory);
-                //    newTask.RunAsync();
-                newTask.RoutingAsync();
+                string message = "ABCD";
+                byte[] mb = Encoding.UTF8.GetBytes(message);
+                ReadOnlyMemory<byte> memory = new ReadOnlyMemory<byte>(mb);
+                Console.WriteLine(memory.ToString());
 
             }
             catch (Exception ex)
