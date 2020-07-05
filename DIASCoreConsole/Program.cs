@@ -32,8 +32,8 @@ namespace DIASCoreConsole
                 //path = Path.Combine(path, @"..\RunTime");
                 //Console.WriteLine(Path.GetFullPath(path));
 
-                ILoggerFactory loggerFactory = new LoggerFactory()
-                    .AddConsole();
+                //ILoggerFactory loggerFactory = new LoggerFactory()
+                //    .AddConsole();
 
 
                 //ILogger logger = loggerFactory.CreateLogger<Program>();
@@ -76,7 +76,7 @@ namespace DIASCoreConsole
                 Console.WriteLine(ex);
             }
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
 

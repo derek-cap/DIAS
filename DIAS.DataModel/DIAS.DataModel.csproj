@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <Import Project="..\DIAS.Shared\DIAS.Shared.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.6.2" />
-    <PackageReference Include="fo-dicom.NetCore" Version="3.0.2" />
-    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.5" />
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="fo-dicom.NetCore" Version="4.0.5" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.20" />
   </ItemGroup>
 
 </Project>

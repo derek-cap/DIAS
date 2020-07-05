@@ -3,6 +3,7 @@ using Dicom.Network;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DIAS.DomainService
 { 
@@ -56,8 +57,18 @@ namespace DIAS.DomainService
         {
             throw new NotImplementedException();
         }
+
+        public Task OnReceiveAssociationRequestAsync(DicomAssociation association)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task OnReceiveAssociationReleaseRequestAsync()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
 
-    
+
     }
 }

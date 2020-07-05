@@ -42,7 +42,7 @@ namespace DIASCoreConsole.RabbitMQ
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += async (model, ea) =>
                 {
-                    var body = ea.Body;
+                    var body = ea.Body.ToArray();
                     await PrintBody(body);
                     Console.WriteLine($"  --[{name}] Done");
 
@@ -80,7 +80,7 @@ namespace DIASCoreConsole.RabbitMQ
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += (model, ea) =>
                 {
-                    var body = ea.Body;
+                    var body = ea.Body.ToArray();
                     PrintBody(body).Wait();
                     Console.WriteLine($"  --[{_name}] Done");
                 };

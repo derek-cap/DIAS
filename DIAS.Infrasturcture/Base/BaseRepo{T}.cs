@@ -20,7 +20,7 @@ namespace ModelRepository
 
         public T GetOne(int? id) => Table.Find(id);
 
-        public Task<T> GetOneAsync(int? id) => Table.FindAsync(id);
+        public ValueTask<T> GetOneAsync(int? id) => Table.FindAsync(id);
 
         public IEnumerable<T> GetAll() => Table.ToList();
 

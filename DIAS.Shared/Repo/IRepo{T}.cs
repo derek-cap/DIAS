@@ -18,7 +18,7 @@ namespace DIAS
         Task<int> AddAsync(T entity);
 
         T GetOne(int? id);
-        Task<T> GetOneAsync(int? id);
+        ValueTask<T> GetOneAsync(int? id);
 
         IEnumerable<T> GetAll();
         Task<IEnumerable<T>> GetAllAsync();

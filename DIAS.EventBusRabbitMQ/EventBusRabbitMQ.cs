@@ -169,8 +169,8 @@ namespace DIAS.EventBusRabbitMQ
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += async (model, ea) =>
             {
-                var eventName = ea.RoutingKey;
-                var message = Encoding.UTF8.GetString(ea.Body);
+                var eventName = ea.RoutingKey;               
+                var message = Encoding.UTF8.GetString(ea.Body.ToArray());
 
                 await ProcessEvent(eventName, message);
             };
