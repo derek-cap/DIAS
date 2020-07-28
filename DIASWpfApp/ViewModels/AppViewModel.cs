@@ -1,4 +1,6 @@
-﻿using MvvmCross.Commands;
+﻿using DIASWpfApp.Models;
+using MvvmCross.Base;
+using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 using ReactiveUI;
 using System;
@@ -32,26 +34,35 @@ namespace DIASWpfApp.ViewModels
         private readonly List<INotifyPropertyChanged> _contents;
         public IEnumerable<INotifyPropertyChanged> Contents => _contents;
 
-        private MvxAsyncCommand _openCommand;
-        public ICommand OpenCommand => _openCommand ?? (_openCommand = new MvxAsyncCommand(OpenAsync));
+        private MyMvxAsyncCommand _openCommand;
+        public ICommand OpenCommand => _openCommand;
+
+        private int _index;
 
 
         public AppViewModel()
         {
             _contents = new List<INotifyPropertyChanged>();
+            _contents.Add(new WorklistViewModel());
             _contents.Add(new CrossSearchViewModel());
 
             _contents.Add(new MainViewModel());
 
             _currentContent = _contents.First();
+            _index = 0;
+
+            _openCommand = new MyMvxAsyncCommand(OpenAsync, () => true, false);
         }
 
         private async Task OpenAsync()
         {
-            CurrentContent = Contents.Last();
-            Information = "Do open.";
-            await Task.CompletedTask;
+            Information = $"Do open. {_index++}";
+            await Task.Delay(6000);
+
+         //   _openCommand.RaiseCanExecuteChanged();
         }
+
+
 
     }
 }

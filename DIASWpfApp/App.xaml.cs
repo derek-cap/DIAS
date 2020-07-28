@@ -1,4 +1,7 @@
-﻿using ReactiveUI;
+﻿using MvvmCross.Base;
+using MvvmCross.Core;
+using MvvmCross.ViewModels;
+using ReactiveUI;
 using Splat;
 using System;
 using System.Collections.Generic;

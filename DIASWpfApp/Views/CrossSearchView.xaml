@@ -17,8 +17,8 @@
         </Grid.RowDefinitions>
         <TextBlock FontSize="16" FontWeight="SemiBold" 
                    VerticalAlignment="Center" Text="Search for: "/>
-        <TextBox Grid.Column="1" Margin="6 0 0 0" x:Name="searchTextBox" Text="{Binding SearchTerm}" />
-        <ListBox x:Name="searchResultsListBox" Grid.ColumnSpan="3" 
+        <TextBox Grid.Column="1" Margin="6 0 0 0" x:Name="searchTextBox" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
+        <ListBox x:Name="searchResultsListBox" Grid.ColumnSpan="3" ItemsSource="{Binding SearchResults}"
                  Grid.Row="1" Margin="0,6,0,0" HorizontalContentAlignment="Stretch"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                  ScrollViewer.VerticalScrollBarVisibility="Visible"/>

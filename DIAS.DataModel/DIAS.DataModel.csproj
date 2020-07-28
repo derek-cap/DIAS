@@ -10,6 +10,7 @@
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="fo-dicom.NetCore" Version="4.0.5" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.20" />
+    <PackageReference Include="System.Reactive" Version="4.4.1" />
   </ItemGroup>
 
 </Project>

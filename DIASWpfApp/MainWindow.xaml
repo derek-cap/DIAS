@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:DIASWpfApp.ViewModels"
         xmlns:views="clr-namespace:DIASWpfApp.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="600" Width="800"
         FontFamily="Calibri" FontSize="16"
         >
     <Window.Resources>
@@ -15,6 +15,10 @@
             <Grid>
                 <views:MainView/>
             </Grid>          
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:WorklistViewModel}">
+            <views:WorklistView/>
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type vm:CrossSearchViewModel}">
@@ -29,13 +33,19 @@
             <RowDefinition/>
             <RowDefinition Height="48"/>
         </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Label Foreground="Blue" FontSize="18" Margin="4,0,0,0">
+                <Hyperlink x:Name="openButton" Command="{Binding OpenCommand}">Worklist</Hyperlink>
+            </Label>
+        </StackPanel>
         
-        <StackPanel Margin="2" Background="LightGray" Orientation="Horizontal">
-            <TextBlock Grid.Column="1" TextWrapping="WrapWithOverflow" 
+        <!--<StackPanel Margin="2" Background="LightGray" Orientation="Horizontal">
+            --><!--<TextBlock Grid.Column="1" TextWrapping="WrapWithOverflow" 
                  Margin="6" VerticalAlignment="Center">
                 <Hyperlink x:Name="openButton" Command="{Binding OpenCommand}">Open</Hyperlink>
-            </TextBlock>
-        </StackPanel>
+            </TextBlock>--><!--
+            <Button Content="Click" Command="{Binding OpenCommand}" Width="96" Margin="2"/>
+        </StackPanel>-->
         
         <Grid Grid.Row="1" Margin="2" Background="AliceBlue">
             <ContentControl Content="{Binding CurrentContent}"/>
@@ -43,6 +53,7 @@
 
         <StackPanel Grid.Row="2" Background="#10000000" Margin="2">
             <TextBlock Text="{Binding Information}" Margin="2"/>
+
         </StackPanel>
     </Grid>
 </Window>

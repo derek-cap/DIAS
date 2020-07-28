@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\DIAS.DataModel\DIAS.DataModel.csproj" />
   </ItemGroup>
 
 </Project>
