@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.4.2" />
     <PackageReference Include="NuGet.Client" Version="4.2.0" />
-    <PackageReference Include="NuGet.Protocol" Version="5.6.0" />
+    <PackageReference Include="NuGet.Protocol" Version="5.9.3" />
     <PackageReference Include="ReactiveUI" Version="11.4.17" />
     <PackageReference Include="ReactiveUI.WPF" Version="11.4.17" />
   </ItemGroup>
